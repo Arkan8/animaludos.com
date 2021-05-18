@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animaludos/pages/productDetails.dart';
 
 class Products extends StatefulWidget {
   @override
@@ -12,6 +13,30 @@ class _ProductsState extends State<Products> {
       "picture": "assets/products/pienso.jpg",
       "oldprice": 29.99,
       "price": 19.99,
+    },
+    {
+      "name": "Arnés",
+      "picture": "assets/products/arnes.jpg",
+      "oldprice": 24.99,
+      "price": 14.99,
+    },
+    {
+      "name": "Arnés",
+      "picture": "assets/products/arnes.jpg",
+      "oldprice": 24.99,
+      "price": 14.99,
+    },
+    {
+      "name": "Arnés",
+      "picture": "assets/products/arnes.jpg",
+      "oldprice": 24.99,
+      "price": 14.99,
+    },
+    {
+      "name": "Arnés",
+      "picture": "assets/products/arnes.jpg",
+      "oldprice": 24.99,
+      "price": 14.99,
     },
     {
       "name": "Arnés",
@@ -54,7 +79,9 @@ class SingleProduct extends StatelessWidget {
         tag: productName,
         child: Material(
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductDetails() ));
+            },
             child: GridTile(
               footer: Container(
                 height: 40,
