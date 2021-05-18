@@ -57,9 +57,15 @@ class SingleProduct extends StatelessWidget {
             onTap: () {},
             child: GridTile(
               footer: Container(
-                color: Colors.white,
-                child: ListTile(
-                  leading: Text(productName, style: TextStyle(fontWeight: FontWeight.bold),),
+                height: 40,
+                color: Colors.orange.withOpacity(0.7),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("$productName", style: TextStyle(fontWeight: FontWeight.bold)),
+                    SizedBox(width: 25.0),
+                    Text("$productPrice€", style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
                 ),
               ),
               child: Image.asset(productPic, fit: BoxFit.cover),
