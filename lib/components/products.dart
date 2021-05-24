@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:animaludos/pages/productDetails.dart';
 
@@ -9,7 +11,7 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var productList = [
     {
-      "name": "Pienso",
+      "name": "KOME Pienso para perros adultos con pollo y cordero",
       "picture": "assets/products/pienso.jpg",
       "oldprice": 29.99,
       "price": 19.99,
@@ -80,20 +82,36 @@ class SingleProduct extends StatelessWidget {
         child: Material(
           child: InkWell(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductDetails() ));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductDetails(
+                //passing data of product tapped to product details page
+                productDetailName: productName,
+                productDetailPic: productPic,
+                productDetailOldPrice: productOldPrice,
+                productDetailPrice: productPrice,
+              ) ));
             },
             child: GridTile(
               footer: Container(
-                height: 40,
+                height: 60,
                 color: Colors.orange.withOpacity(0.7),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("$productName", style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(width: 25.0),
-                    Text("$productPrice€", style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
-                ),
+                child:
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("$productName", textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                      SizedBox(width: 25.0),
+                      Text("$productPrice€", style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Text("$productName", style: TextStyle(fontWeight: FontWeight.bold)),
+                //     SizedBox(width: 25.0),
+                //     Text("$productPrice€", style: TextStyle(fontWeight: FontWeight.bold)),
+                //   ],
+                // ),
               ),
               child: Image.asset(productPic, fit: BoxFit.cover),
             ),

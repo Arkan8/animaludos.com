@@ -46,8 +46,8 @@ class DrawerAnimaludos extends StatelessWidget {
             InkWell(
               onTap: () {},
               child: ListTile(
-                leading: Icon(Icons.category, color: Colors.orange),
-                title: Text("Categorías"),
+                leading: Icon(Icons.shopping_cart, color: Colors.orange),
+                title: Text("Carrito de la compra"),
               ),
             ),
             InkWell(
