@@ -1,13 +1,13 @@
 //flutter packages
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
 
 //Own packages
 import 'package:animaludos/components/horizontal_listview.dart';
 import 'package:animaludos/components/products.dart';
 import 'package:animaludos/components/drawer.dart';
 import 'package:animaludos/components/carousel.dart';
+import 'package:animaludos/pages/cart.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -38,7 +38,9 @@ class _HomeState extends State<Home> {
           ),
           IconButton(
             //CART BUTTON
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+            },
             icon: Icon(Icons.shopping_cart_rounded, color: Colors.black),
           ),
         ],

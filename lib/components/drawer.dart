@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:animaludos/pages/cart.dart';
 
 class DrawerAnimaludos extends StatelessWidget {
   @override
@@ -44,7 +45,9 @@ class DrawerAnimaludos extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
                 leading: Icon(Icons.shopping_cart, color: Colors.orange),
                 title: Text("Carrito de la compra"),
