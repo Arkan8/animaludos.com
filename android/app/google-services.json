@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "995286136290",
+    "project_id": "animaludos-792d8",
+    "storage_bucket": "animaludos-792d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995286136290:android:8922f0e450ecbb99c675bb",
+        "android_client_info": {
+          "package_name": "com.arkansoftworks.animaludos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995286136290-5is9n832jqga68vvnruqsm4498qvnggu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arkansoftworks.animaludos",
+            "certificate_hash": "af844474c685470eedd5e28bb026e25122f5f0cd"
+          }
+        },
+        {
+          "client_id": "995286136290-6rd7gnnvjjr99m49aq9rs8r2g56pr6cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArKxC1MnjtbrYG2AHjF9qKNyVUTmlV9Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995286136290-6rd7gnnvjjr99m49aq9rs8r2g56pr6cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
